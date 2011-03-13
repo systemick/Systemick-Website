@@ -1,11 +1,26 @@
 /* systemick7.css */
 
-#site-name a {
-	color: #006fc7;
-	font-family: 'Ubuntu', Verdana, Trebuchet, Arial, Times, "Times New Roman", serif;
-	font-size: 24px;
-	font-weight: bold;
-	margin-bottom: 0.5em;
+body {
+  background: #eff;
+  background: url(/sites/all/themes/custom/systemick7/images/bg-test1.png) top left;
+  color: #000;
+  font-family: 'PT Sans', Lucida Grande, Verdana, Arial, sans-serif;
+  font-size: 75%;
+  line-height:1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #006fc7;
+  font-family: Arvo, Helvetica, Helvetica Neue, Arial, sans-serif;
+  font-weight: normal;
+}
+
+a:link, a:visited {
+  color: #265789;
+  outline: none;
+  text-decoration: none;
 }
 
 #header {
@@ -14,4 +29,73 @@
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   position: relative;
+}
+
+#navigation ul.main-menu {
+  /*background: #ddd;*/
+  background: url(/sites/all/themes/custom/systemick7/images/test6.png) repeat-x ;
+  background: #fff;
+  border-bottom: solid 1px #006fc7;
+  height: 3em;
+  margin: 0;
+  padding: 1em 0 0 0;
+}
+
+#navigation ul.main-menu li {
+  border-left: solid 1px #006fc7;
+  border-right: solid 1px #006fc7;
+  border-top: solid 1px #006fc7;
+  /*border-bottom: solid 1.5px #265789;*/
+  float: left;
+  height: 2.5em;
+  margin: 0 0.5em 0 0;
+  padding: 0 0 0.4em 0;
+}
+
+#navigation ul.main-menu li a {
+  display: block;
+  float: left;
+  font-weight: bold;
+  /*line-height: 4em;*/
+  padding: 0 1em;
+}
+
+#navigation ul.main-menu li a.active {
+  background: #006fc7;
+  /*background: #265789;;*/
+  /*border-bottom: solid 1.5px #fff;*/
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  color: #fff;
+  display: block;
+  float: left;
+  font-weight: bold;
+  /*line-height: 4em;*/
+  padding: 0 1em;
+  text-decoration: underline;
+}
+
+#navigation ul.main-menu li a.active hover {
+  text-decoration: none;
+}
+
+/*body.sidebar-second #sidebar-second {
+  background: #85BCFE;
+}*/
+
+#wrapper {
+  background: #fff;
+}
+
+.block {
+  background: #eff;
+  border: solid 1px #006fc7;
+  padding: 0 1em;
+}
+
+#block-system-main {
+  background: #fff;
+  border: 0;
+  padding: 0 1em;
 }

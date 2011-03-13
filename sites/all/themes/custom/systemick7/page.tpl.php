@@ -44,13 +44,13 @@
       <?php endif; ?>
       <?php if (!$page['navigation']): ?>
         <?php if ($main_menu): print $main_menu; endif; ?>
-        <?php if ($secondary_menu): print $secondary_menu; endif; ?>
+        <?php //if ($secondary_menu): print $secondary_menu; endif; ?>
       <?php endif; ?>
     </nav> <!-- /#navigation -->
   <?php endif; ?>
 
   <section id="main" role="main" class="clearfix">
-    <?php if ($breadcrumb): print $breadcrumb; endif;?>
+    <?php //if ($breadcrumb): print $breadcrumb; endif;?>
     <?php print $messages; ?>
     <a id="main-content"></a>
     <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
@@ -62,7 +62,7 @@
     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
     <?php print render($page['content']); ?>
   </section> <!-- /#main -->
-  
+
   <?php if ($page['sidebar_first']): ?>
     <aside id="sidebar-first" role="complimentary" class="sidebar clearfix">
       <?php print render($page['sidebar_first']); ?>
