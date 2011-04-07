@@ -8,7 +8,7 @@
   <?php if ($user_picture || $display_submitted || !$page): ?>
     <?php if (!$page): ?>
       <header>
-	<?php endif; ?>
+	  <?php endif; ?>
 
       <?php print $user_picture; ?>
   
@@ -24,7 +24,7 @@
 
     <?php if (!$page): ?>
       </header>
-	<?php endif; ?>
+	  <?php endif; ?>
   <?php endif; ?>
 
   <div class="content"<?php print $content_attributes; ?>>

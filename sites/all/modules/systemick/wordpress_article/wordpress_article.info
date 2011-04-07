@@ -1,0 +1,6 @@
+name = Wordpress Article
+description = Provides block and page to display Systyemick articles.
+package = Systemick
+core = 7.x
+version = 7.x-1.0
+files[] = wordpress_article.module

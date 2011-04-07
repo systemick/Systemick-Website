@@ -1,0 +1,51 @@
+<?php
+/**
+ * @file
+ * Modifies contact form and email
+ */
+ 
+ 
+/**
+ * Implementation of hook_form_alter().
+ *
+ */
+function systemickcontact_form_alter(&$form, $form_state, $form_id) {
+  switch ($form_id) {
+    // This is our form ID.
+    case 'contact_site_form':
+      // Our mods go here.
+      $form['phone'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Your phone number'),
+        '#maxlength' => 255,
+        '#size' => 25,
+        '#default_value' => '',
+        '#required' => false,
+      );
+      $form['name']['#weight'] = 4;
+      $form['name']['#size'] = 25;
+      $form['mail']['#weight'] = 6;
+      $form['mail']['#size'] = 25;
+      $form['phone']['#weight'] = 8;
+      $form['subject']['#weight'] = 10;
+      $form['subject']['#size'] = 35;
+      $form['message']['#weight'] = 12;
+      $form['copy']['#weight'] = 13;
+      $form['submit']['#weight'] = 14;
+      break;
+
+    default:
+      break;
+  }
+}
+
+/**
+ * Implementation of hook_mail_alter().
+ *
+ */
+function systemickcontact_mail_alter(&$message) {
+  // Add the telephone field to the email
+  if ($message['id'] == 'contact_page_mail') {
+    $message['body'][2] = 'Phone Number: '.$message['params']['phone'];
+  }
+}

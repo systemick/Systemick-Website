@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Formats a main_menu node type ready to display
+ */
+
+/**
+  * Implementation of hook_help().
+  */
+function main_menu_page_help($path, $arg) {
+  switch($path) {
+    case 'admin/help#main_menu_page':
+      return '<p>' . t('A module to format a node of type main_menu') . '</p>';
+      break;
+  }
+}
+
+/**
+  * Implementation of hook_preprocess_page().
+  */
+function main_menu_page_preprocess_page(&$variables) {
+  // For custom content types we use the title as the title in the html head
+  // and the heading field as the page title
+  if(isset($variables['node']) && ($variables['node']->type == 'main_menu' || $variables['node']->type == 'minor_page')) {
+    $variables['title'] = '';
+  }
+}

@@ -1,0 +1,6 @@
+name = Systemick Contact
+description = Module to add telephone field to site wide contact form and change email.
+package = Systemick
+core = 7.x
+version = 7.x-1.0
+files[] = systemickcontact.module

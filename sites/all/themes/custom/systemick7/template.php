@@ -105,5 +105,8 @@ function systemick7_preprocess_node(&$variables) {
  * Changes the search form to use the "search" input element of HTML5.
  */
 function systemick7_preprocess_search_block_form(&$vars) {
+  //print '<pre>';
+  //print_r($vars);
+  //exit;
   $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
 }

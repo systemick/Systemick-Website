@@ -1,0 +1,6 @@
+name = Front Page
+description = Provides formatting for Front Page Node.
+package = Systemick
+core = 7.x
+version = 7.x-1.0
+files[] = front.module

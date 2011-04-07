@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>http://drupal7-systemick.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.com/articles</loc></url>
+<url><loc>http://drupal7-systemick.com/open-source</loc><lastmod>2011-04-07T15:40Z</lastmod><changefreq>hourly</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.com/consultancy</loc><lastmod>2011-04-07T15:42Z</lastmod><changefreq>hourly</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.com/install-drupal</loc><lastmod>2011-03-22T15:52Z</lastmod><changefreq>monthly</changefreq></url>
+<url><loc>http://drupal7-systemick.com/create-drupal-theme</loc><lastmod>2011-03-22T15:54Z</lastmod><changefreq>monthly</changefreq></url>
+<url><loc>http://drupal7-systemick.com/links</loc><lastmod>2011-03-22T16:03Z</lastmod><changefreq>monthly</changefreq></url>
+<url><loc>http://drupal7-systemick.com/front</loc><lastmod>2011-03-22T21:28Z</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.com/development</loc><lastmod>2011-04-07T15:39Z</lastmod><changefreq>hourly</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.com/php</loc><lastmod>2011-04-07T15:38Z</lastmod><changefreq>hourly</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.com/drupal</loc><lastmod>2011-04-07T15:43Z</lastmod><changefreq>always</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.com/javascript</loc><lastmod>2011-04-07T15:37Z</lastmod><changefreq>hourly</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.com/accessibility</loc><lastmod>2011-03-18T11:57Z</lastmod><changefreq>monthly</changefreq></url>
+<url><loc>http://drupal7-systemick.com/ecommerce</loc><lastmod>2011-03-22T13:06Z</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+</urlset>

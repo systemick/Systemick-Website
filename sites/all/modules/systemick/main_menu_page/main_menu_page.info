@@ -1,0 +1,6 @@
+name = Main Menu Page
+description = Provides formatting for Main Menu Nodes.
+package = Systemick
+core = 7.x
+version = 7.x-1.0
+files[] = main_menu_page.module

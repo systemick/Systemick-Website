@@ -1,9 +1,9 @@
 /* systemick7.css */
 
 body {
-  background: #eff;
+  background: #558CCE;
   background: url(/sites/all/themes/custom/systemick7/images/bg-test1.png) top left;
-  color: #000;
+  color: #011;
   font-family: 'PT Sans', Lucida Grande, Verdana, Arial, sans-serif;
   font-size: 75%;
   line-height:1.5;
@@ -19,12 +19,48 @@ h1, h2, h3, h4, h5, h6 {
 
 a:link, a:visited {
   color: #265789;
+  font-weight: bold;
   outline: none;
   text-decoration: none;
 }
 
+input.form-submit {
+  background: #006fc7;
+  border: solid 1px #000;
+  color: #fff;
+  font-family: 'PT Sans', Lucida Grande, Verdana, Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* 2 columns: sidebar-second */
+body.sidebar-second #main {
+  float: left;
+  margin: 0 20px 0 0;
+  padding: 0;
+  width: 670px;
+}
+
+/* 2 columns: sidebar-second */
+body.sidebar-second #sidebar-second {
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+}
+
+#wrapper {
+  background: #fff;
+  border-left:solid 0.5em #ccc;
+  border:solid 0.5em #ccc;
+  margin: 0.5em 0 0 7.5em;
+  /*bottom: 4px;
+  position: relative;
+  right: 4px;*/
+}
+
 #header {
 	background: url(/sites/all/themes/custom/systemick7/images/header-bg.jpg) top left no-repeat;
+	/*border: solid 1px #006fc7;*/
 	height:150px;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -42,6 +78,7 @@ a:link, a:visited {
 }
 
 #navigation ul.main-menu li {
+  background: #006fc7;
   border-left: solid 1px #006fc7;
   border-right: solid 1px #006fc7;
   border-top: solid 1px #006fc7;
@@ -53,6 +90,7 @@ a:link, a:visited {
 }
 
 #navigation ul.main-menu li a {
+  color: #fff;
   display: block;
   float: left;
   font-weight: bold;
@@ -61,37 +99,76 @@ a:link, a:visited {
 }
 
 #navigation ul.main-menu li a.active {
-  background: #006fc7;
+  background: #fff;
   /*background: #265789;;*/
-  /*border-bottom: solid 1.5px #fff;*/
+  border-bottom: solid 2.5px #fff;
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  color: #fff;
+  color: #006fc7;
   display: block;
   float: left;
   font-weight: bold;
   /*line-height: 4em;*/
   padding: 0 1em;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #navigation ul.main-menu li a.active hover {
   text-decoration: none;
 }
 
-/*body.sidebar-second #sidebar-second {
-  background: #85BCFE;
-}*/
+/**** footer ****/
 
-#wrapper {
-  background: #fff;
+#footer {
+  clear: both;
+  padding: 0;
+  position: relative;
 }
 
+#block-menu-menu-footer {
+  background: #006fc7;
+  border: solid 1px #000;
+  color: #fff;
+}
+
+#block-menu-menu-footer ul.menu {
+  list-style: none;
+  margin: 0 0 1em 22em;
+  padding: 1em 0 0 0;
+}
+
+#block-menu-menu-footer ul.menu li {
+  display: inline;
+  list-style-image: none;
+  list-style-type: none;
+  padding: 0 2em 0 0;
+}
+
+#block-menu-menu-footer ul.menu li a {
+  color: #fff;
+}
+
+/****************/
+
+/**** blocks ****/
+
 .block {
+  background: #eee;
   background: #eff;
+  border: solid 2px #ccc;
   border: solid 1px #006fc7;
   padding: 0 1em;
+}
+
+.block h2 {
+  /*background: #ccc;*/
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.block-search {
+  padding: 1em;
 }
 
 #block-system-main {
@@ -99,3 +176,167 @@ a:link, a:visited {
   border: 0;
   padding: 0 1em;
 }
+
+.block ul.menu {
+  list-style: none;
+  /*margin: 1em 0 0 0;*/
+  padding: 0;
+}
+.block ul.menu li {
+  list-style: none;
+  padding: 0.5em 0 0 0;
+}
+
+/**********************/
+
+/**** Tweets Page ****/
+
+ul#tweets-page-list {
+  list-style: none;
+  /*margin: 1em 0 0 0;*/
+}
+
+ul#tweets-page-list li {
+  border-bottom: solid 1px #ccc;
+  margin: 0 0 0 -2em;
+  padding: 1em 0 0.5em 0;
+}
+
+ul#tweets-page-list p {
+  margin: 0;
+}
+
+/*********************/
+
+/**** Tweets Block ****/
+
+#block-tweets-recent-tweets .item-list ul {
+  list-style: none;
+  /*margin: 1em 0 0 0;*/
+  padding: 0;
+}
+#block-tweets-recent-tweets .item-list ul li.first {
+  margin: 0.5em 0 0 0;
+}
+.block-tweets .more-link {
+  float: right;
+  margin: 2em 0 0 0;
+}
+
+/*********************/
+
+/**** Contact Form ****/
+.contact-form {
+  background: #eee;
+  border: solid 1px #ccc;
+  padding: 0.5em;
+}
+
+/***********************/
+
+/**** Contact Form ****/
+
+#login-form {
+  background: #eee;
+  border: solid 1px #ccc;
+  padding: 0.5em;
+}
+
+/**********************/
+
+/**** Main Pages ***/
+
+.field-label {
+  height: 2em;
+}
+
+.field-name-field-banner-image {
+  margin: 0.5em 0 0 0;
+}
+
+.field-name-field-strapline {
+  color: #006fc7;
+  font-weight: bold;
+  margin: 0 0 1em 0;
+}
+
+.field-name-field-software-logo {
+  float: right;
+  padding: 0.5em 0 0.5em 0.5em;
+}
+
+.field-name-field-objectives {
+  margin: 1em 0 0 0;
+}
+
+ul.objectives li {
+  font-weight: bold;
+}
+
+.skin-default {
+  height: 20em;
+}
+
+.field-name-field-slideshow {
+  height: 17em;
+  margin: 0 0 1em 0;
+}
+
+.field-name-field-slideshow .field-label {
+  display: none;
+}
+
+p.first-line {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+}
+
+p.first-line .first-word {
+  color: #006fc7;
+}
+
+.field-name-field-specialist-skills p {
+  color: #006fc7;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+}
+
+.view-slideshow .field-name-body {
+  background: #fff;
+  border: solid 1px #000;
+  left: 1em;
+  opacity:0.8;
+  padding: 1em;
+  position: relative;
+  top: -16em;
+  width: 25em;
+}
+
+/**********************/
+
+/*** Articles page ***/
+
+#wordpress-articles {
+  margin: 1em 0 0 -0.5em;
+}
+#wordpress-articles ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#wordpress-articles ul li {
+  list-style-type: none;
+  padding: 0;
+}
+#wordpress-articles ul li p {
+  padding: 0;
+}
+.wordpress-article-teaser {
+  border-bottom: solid 1px #006fc7;
+  margin: 2em 0 0 0;
+}
+
+/*************************/

@@ -1,0 +1,129 @@
+<?php
+
+/**
+ * @file
+ * Implements block and page callback to display Systemick Articles
+ */
+
+define('BLOCK_ARTICLES', 3);
+
+/**
+  * Implementation of hook_help().
+  */
+function wordpress_article_help($path, $arg) {
+  switch($path) {
+    case 'admin/help#wordpress_article':
+      return '<p>' . t('A module to display articles both on a page and as a block') . '</p>';
+      break;
+  }
+}
+
+/**
+  * Implementation of hook_menu().
+  */
+function wordpress_article_menu() {
+  $menu['articles'] = array(
+    'title' => 'Recent Articles',
+    'access callback' => TRUE,
+    'page callback' => 'wordpress_article_page',
+    'type' => MENU_CALLBACK,
+  );
+  return $menu;
+}
+
+/**
+  * Implementation of hook_theme().
+  */
+function wordpress_article_theme() {
+  return array(
+    'wordpress_article' => array(
+      'arguments' => array('content' => NULL),
+      'template' => 'wordpress-article',
+    ),
+    'wordpress_articles' => array(
+      'arguments' => array('content' => NULL),
+      'template' => 'wordpress-articles',
+    ),
+  );
+}
+
+// MG - 27/03/11
+// The block for articles is provided by the menu
+
+/**
+  * Implementation of hook_block_info().
+  */
+/*function wordpress_article_block_info() {
+  $blocks = array();
+  $blocks['wordpress_articles'] = array(
+    'info' => t('Recent Articles'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}*/
+
+/**
+  * Implementation of hook_block_view().
+  */
+/*function wordpress_article_block_view($block_name = '') {
+  if($block_name == 'recent_tweets') {
+    $nodes = wordpress_article_content(BLOCK_ARTICLES);
+    $articles = array();
+    foreach($nodes as $node) {
+      $articles[] = $node['node_link'];
+    }
+    $block = array();
+    $block['subject'] = t('Recent Articles');
+    $block['content']['list'] = array(
+      '#theme' => 'item_list',
+      '#items' => $articles,
+    );
+    return $block;
+  }
+}*/
+
+/**
+ * Format articles content to display in a page callback.
+ *
+ */
+function wordpress_article_page() {
+  drupal_set_title('Recent Articles');
+  $nodes = wordpress_article_content();
+  $articles = array();
+  foreach($nodes as $node) {
+    $articles[] = theme('wordpress_article', array('node' => $node));
+  }
+  $output = theme('item_list', array('items' => $articles));
+  return theme('wordpress_articles', array(
+    'content' => $output
+  ));
+  return array('#markup' => theme('item_list', array('items' => $articles)));
+}
+
+/**
+ * Get a number of articles to display in a block or page.
+ *
+ * @param $num_articles
+ *   The number of articles to display. If FALSE all articles will be displayed
+ */
+function wordpress_article_content($num_articles = FALSE) {
+  $result = db_query("SELECT nid FROM {node} WHERE type = :type", array(
+    ':type' => 'wordpress_article',
+  ));
+  $nodes = array();
+  $entities = array();
+  while($object = $result->fetch()) {
+    $node = node_view(node_load($object->nid),'teaser');
+    $node['title'] = $node['body']['#object']->title;
+    $node['nid'] = $node['body']['#object']->nid;
+    $node['created'] = $node['body']['#object']->created;
+    $node['node_link'] = l($node['title'], 'node/'.$node['nid']);
+    $node['teaser'] = $node['body'][0]['#markup'];
+    $nodes[] = $node;
+    $entities[] = entity_load('node', array($object->nid));
+  }
+  if($num_articles && $num_articles > count($nodes)) {
+    $nodes = array_slice($nodes, $num_articles);
+  }
+  return $nodes;
+}

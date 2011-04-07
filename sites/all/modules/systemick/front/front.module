@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Formats a front node type ready to display
+ */
+
+/**
+  * Implementation of hook_help().
+  */
+function front_help($path, $arg) {
+  switch($path) {
+    case 'admin/help#front':
+      return '<p>' . t('A module to format a node of type front. There should only be one node of this type') . '</p>';
+      break;
+  }
+}
+
+/**
+  * Implementation of hook_preprocess_page().
+  */
+function front_preprocess_page(&$variables) {
+  // For custom content types we use the title as the title in the html head
+  // and the heading field as the page title
+  if(isset($variables['node']) && ($variables['node']->type == 'front_page')) {
+    $variables['title'] = '';
+  }
+}
+
+function front_preprocess_node(&$variables) {
+  if($variables['node']->type == 'front_page') {
+    $variables['content']['field_slideshow'][0]['#markup'] = views_embed_view('slideshow', 'block_1');
+  }
+}

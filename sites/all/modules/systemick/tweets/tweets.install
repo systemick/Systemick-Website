@@ -1,0 +1,98 @@
+<?php
+
+/**
+ * Implementation of hook_install().
+ */
+function tweets_install() {
+  // Create tables.
+  drupal_install_schema('tweets');
+}
+
+function tweets_uninstall() {
+  // Remove tables.
+  drupal_uninstall_schema('tweets');
+}
+
+/**
+ * Implementation of hook_schema().
+ */
+function tweets_schema() {
+  $schema['tweets'] = array(
+    'description' => t("Stores individual Twitter posts."),
+    'fields' => array(
+      'tid' => array(
+        'description' => t("Unique identifier for each {tweets} post."),
+        'type' => 'numeric',
+        'unsigned' => TRUE,
+        'precision' => 20,
+        'scale' => 0,
+        'not null' => TRUE,
+        'default' => 0
+      ),
+      'screen_name' => array(
+        'description' => t("Screen name of the {tweets} user."),
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => ''
+      ),
+      'created_at' => array(
+        'description' => t("Date and time the {tweets} post was created."),
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'default' => ''
+      ),
+      'created_time' => array(
+        'description' => t("A duplicate of {tweets}.created_at in UNIX timestamp format."),
+        'type' => 'int',
+        'not null' => TRUE
+      ),
+      'text' => array(
+        'description' => t("The text of the {tweets} post."),
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE
+      ),
+      'source' => array(
+        'description' => t("The application that created the {tweets} post."),
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE
+      ),
+      'in_reply_to_status_id' => array(
+        'description' => t("Unique identifier of a status this {tweets} post was replying to."),
+        'type' => 'numeric',
+        'unsigned' => TRUE,
+        'precision' => 20,
+        'scale' => 0,
+        'not null' => FALSE,
+      ),
+      'in_reply_to_user_id' => array(
+        'description' => t("Unique identifier for the {tweets_account} this post was replying to."),
+        'type' => 'numeric',
+        'unsigned' => TRUE,
+        'precision' => 20,
+        'scale' => 0,
+        'not null' => FALSE,
+      ),
+      'in_reply_to_screen_name' => array(
+        'description' => t("Screen name of the {tweets} user this post was replying to."),
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ),
+      'truncated' => array(
+        'description' => t("Boolean flag indicating whether the {tweets} status was cut off to fit in the 140 character limit."),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0
+       ),
+    ),
+    'indexes' => array('screen_name' => array('screen_name')),
+    'primary key' => array('tid'),
+  );
+
+  return $schema;
+}
