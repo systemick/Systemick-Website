@@ -48,7 +48,7 @@
     <div class="field-label"<?php print $title_attributes; ?>><h4><?php print $label ?></h4>&nbsp;</div>
   <?php endif; ?>
   <div class="field-label">
-    <h4>Our Solultion</h4>
+    <h4>Our Solution</h4>
   </div>
   <div class="field-items"<?php print $content_attributes; ?>>
     <?php foreach ($items as $delta => $item) : ?>

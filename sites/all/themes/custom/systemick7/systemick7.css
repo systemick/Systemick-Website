@@ -5,7 +5,7 @@ body {
   background: url(/sites/all/themes/custom/systemick7/images/bg-test1.png) top left;
   color: #011;
   font-family: 'PT Sans', Lucida Grande, Verdana, Arial, sans-serif;
-  font-size: 75%;
+  font-size: 85%;
   line-height:1.5;
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ input.form-submit {
 /* 2 columns: sidebar-second */
 body.sidebar-second #main {
   float: left;
-  margin: 0 20px 0 0;
+  margin: 0 1.4em 0 0;
   padding: 0;
   width: 670px;
   
@@ -53,18 +53,13 @@ body.sidebar-second #sidebar-second {
   background: #fff;
   border-left:solid 0.5em #ccc;
   border:solid 0.5em #ccc;
-  /*margin: 0.5em 0 0 7.5em;*/
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.5em;
-  /*bottom: 4px;
-  position: relative;
-  right: 4px;*/
 }
 
 #header {
 	background: url(/sites/all/themes/custom/systemick7/images/header-bg.jpg) top left no-repeat;
-	/*border: solid 1px #006fc7;*/
 	height:150px;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -72,7 +67,6 @@ body.sidebar-second #sidebar-second {
 }
 
 #navigation ul.main-menu {
-  /*background: #ddd;*/
   background: url(/sites/all/themes/custom/systemick7/images/test6.png) repeat-x ;
   background: #fff;
   border-bottom: solid 1px #006fc7;
@@ -86,7 +80,6 @@ body.sidebar-second #sidebar-second {
   border-left: solid 1px #006fc7;
   border-right: solid 1px #006fc7;
   border-top: solid 1px #006fc7;
-  /*border-bottom: solid 1.5px #265789;*/
   float: left;
   height: 2.5em;
   margin: 0 0.5em 0 0;
@@ -98,13 +91,11 @@ body.sidebar-second #sidebar-second {
   display: block;
   float: left;
   font-weight: bold;
-  /*line-height: 4em;*/
   padding: 0 1em;
 }
 
 #navigation ul.main-menu li a.active {
   background: #fff;
-  /*background: #265789;;*/
   border-bottom: solid 2.5px #fff;
   border-left: 0;
   border-right: 0;
@@ -291,7 +282,7 @@ ul.objectives li {
 }
 
 p.first-line {
-  font-size: 14px;
+  font-size: 1.2em;
   font-weight: bold;
   margin: 0 0 0.5em;
 }
@@ -302,7 +293,7 @@ p.first-line .first-word {
 
 .field-name-field-specialist-skills p {
   color: #006fc7;
-  font-size: 12px;
+  font-size: 1.1em;
   font-style: italic;
   font-weight: bold;
   margin: 0 0 0.5em;
@@ -315,7 +306,7 @@ p.first-line .first-word {
   opacity:0.8;
   padding: 1em;
   position: relative;
-  top: -16em;
+  top: -14em;
   width: 25em;
 }
 
