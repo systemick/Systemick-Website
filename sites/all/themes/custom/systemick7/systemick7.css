@@ -355,8 +355,8 @@ ol.search-results {
   margin: 0;
 }
 ol.search-results li {
-  background: #eee;
-  border: solid 1px #ccc;
+  /*background: #eee;*/
+  border: solid 1px #006fc7;
   padding: 0.5em;
 }
 
