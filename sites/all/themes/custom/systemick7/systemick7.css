@@ -338,8 +338,8 @@ p.first-line .first-word {
 /*** Search Page page ***/
 
 #search-form {
-  background: #ccc;
-  border: solid 1px #aaa;
+  background: #eff;
+  border: solid 1px #006fc7;
   margin: 0.5em 0 0 0;
   padding: 0.5em;
 }
