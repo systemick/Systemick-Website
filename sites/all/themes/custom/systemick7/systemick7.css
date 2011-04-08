@@ -37,7 +37,7 @@ body.sidebar-second #main {
   float: left;
   margin: 0 1.4em 0 0;
   padding: 0;
-  width: 670px;
+  width: 700px;
   
 }
 
@@ -56,6 +56,7 @@ body.sidebar-second #sidebar-second {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.5em;
+  width: 970px;
 }
 
 #header {
@@ -104,7 +105,6 @@ body.sidebar-second #sidebar-second {
   display: block;
   float: left;
   font-weight: bold;
-  /*line-height: 4em;*/
   padding: 0 1em;
   text-decoration: none;
 }
@@ -129,8 +129,11 @@ body.sidebar-second #sidebar-second {
 
 #block-menu-menu-footer ul.menu {
   list-style: none;
-  margin: 0 0 1em 22em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1em 0 0 0;
+  text-align: center;
 }
 
 #block-menu-menu-footer ul.menu li {
@@ -149,7 +152,6 @@ body.sidebar-second #sidebar-second {
 /**** blocks ****/
 
 .block {
-  background: #eee;
   background: #eff;
   border: solid 2px #ccc;
   border: solid 1px #006fc7;
@@ -157,7 +159,6 @@ body.sidebar-second #sidebar-second {
 }
 
 .block h2 {
-  /*background: #ccc;*/
   font-size: 1.5em;
   text-align: center;
 }
@@ -169,12 +170,11 @@ body.sidebar-second #sidebar-second {
 #block-system-main {
   background: #fff;
   border: 0;
-  padding: 0 1em;
+  padding: 0 0 0 1em;
 }
 
 .block ul.menu {
   list-style: none;
-  /*margin: 1em 0 0 0;*/
   padding: 0;
 }
 .block ul.menu li {
@@ -188,7 +188,6 @@ body.sidebar-second #sidebar-second {
 
 ul#tweets-page-list {
   list-style: none;
-  /*margin: 1em 0 0 0;*/
 }
 
 ul#tweets-page-list li {
@@ -207,7 +206,6 @@ ul#tweets-page-list p {
 
 #block-tweets-recent-tweets .item-list ul {
   list-style: none;
-  /*margin: 1em 0 0 0;*/
   padding: 0;
 }
 #block-tweets-recent-tweets .item-list ul li.first {
@@ -332,6 +330,38 @@ p.first-line .first-word {
 .wordpress-article-teaser {
   border-bottom: solid 1px #006fc7;
   margin: 2em 0 0 0;
+}
+
+/*************************/
+
+
+/*** Search Page page ***/
+
+#search-form {
+  background: #ccc;
+  border: solid 1px #aaa;
+  margin: 0.5em 0 0 0;
+  padding: 0.5em;
+}
+.page-search-node h1 {
+  margin-left: 0.5em;
+}
+.page-search-node h2 {
+  padding: 0.5em;
+}
+
+ol.search-results {
+  padding: 0;
+  margin: 0;
+}
+ol.search-results li {
+  background: #eee;
+  border: solid 1px #ccc;
+  padding: 0.5em;
+}
+
+.search-results .search-snippet-info {
+  padding: 0;
 }
 
 /*************************/
