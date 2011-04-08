@@ -291,7 +291,7 @@ function _tweets_get_time_since($timestamp) {
   $twelve_hours = 12 * 60 * 60;
   $two_days = 2 * $one_day;
   $one_hour = 60 * 60;
-  if ($time_difference < $twelve_hours) {
+  if ($time_difference < $one_hour) {
     $minutes = floor($time_difference / 60);
     return $minutes . ' minutes ago';
   } else if ($time_difference < $twelve_hours) {
