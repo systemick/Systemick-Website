@@ -53,20 +53,20 @@ function wordpress_article_theme() {
 /**
   * Implementation of hook_block_info().
   */
-/*function wordpress_article_block_info() {
+function wordpress_article_block_info() {
   $blocks = array();
   $blocks['wordpress_articles'] = array(
     'info' => t('Recent Articles'),
     'cache' => DRUPAL_NO_CACHE,
   );
   return $blocks;
-}*/
+}
 
 /**
   * Implementation of hook_block_view().
   */
-/*function wordpress_article_block_view($block_name = '') {
-  if($block_name == 'recent_tweets') {
+function wordpress_article_block_view($block_name = '') {
+  if($block_name == 'wordpress_articles') {
     $nodes = wordpress_article_content(BLOCK_ARTICLES);
     $articles = array();
     foreach($nodes as $node) {
@@ -78,9 +78,18 @@ function wordpress_article_theme() {
       '#theme' => 'item_list',
       '#items' => $articles,
     );
+    $block['content']['more'] = array(
+      '#markup' => l('See more articles...', 'articles', array(
+        'attributes' => array(
+          'class' => array(
+            'more-link'
+          )
+        )
+      )),
+    );
     return $block;
   }
-}*/
+}
 
 /**
  * Format articles content to display in a page callback.
@@ -107,7 +116,7 @@ function wordpress_article_page() {
  *   The number of articles to display. If FALSE all articles will be displayed
  */
 function wordpress_article_content($num_articles = FALSE) {
-  $result = db_query("SELECT nid FROM {node} WHERE type = :type", array(
+  $result = db_query("SELECT nid FROM {node} WHERE type = :type order by created DESC", array(
     ':type' => 'wordpress_article',
   ));
   $nodes = array();
@@ -122,8 +131,9 @@ function wordpress_article_content($num_articles = FALSE) {
     $nodes[] = $node;
     $entities[] = entity_load('node', array($object->nid));
   }
-  if($num_articles && $num_articles > count($nodes)) {
-    $nodes = array_slice($nodes, $num_articles);
+  if($num_articles && $num_articles < count($nodes)) {
+    //die('here' . $num_articles);
+    $nodes = array_slice($nodes, 0, $num_articles);
   }
   return $nodes;
 }

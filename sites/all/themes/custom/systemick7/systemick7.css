@@ -310,7 +310,7 @@ p.first-line .first-word {
 
 /**********************/
 
-/*** Articles page ***/
+/*** Articles page & block ***/
 
 #wordpress-articles {
   margin: 1em 0 0 -0.5em;
@@ -332,7 +332,23 @@ p.first-line .first-word {
   margin: 2em 0 0 0;
 }
 
+.block-wordpress-article {
+  padding: 0 0 1em 1em;
+}
+.block-wordpress-article div.item-list {
+  margin: 0 0 0.5em 0;
+}
+.block-wordpress-article .more-link {
+  /*float: right;
+  margin: 2em 0 0 0;*/
+  line-height: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+}
+
 /*************************/
+
+
 
 
 /*** Search Page page ***/
@@ -348,6 +364,7 @@ p.first-line .first-word {
 }
 .page-search-node h2 {
   padding: 0.5em;
+  text-align: left;
 }
 
 ol.search-results {
