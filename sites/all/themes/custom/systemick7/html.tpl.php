@@ -8,6 +8,7 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <meta name="google-site-verification" content="0cnv-Cuv9SLWzRFe0p7NpuTe-cW9s0xlca6Y-dbOg04" />
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
