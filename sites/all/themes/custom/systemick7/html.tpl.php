@@ -8,7 +8,9 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <!-- tag for systemick-web-development.co.uk -->
   <meta name="google-site-verification" content="0cnv-Cuv9SLWzRFe0p7NpuTe-cW9s0xlca6Y-dbOg04" />
+  <!-- tag for systemick.co.uk -->
   <meta name="google-site-verification" content="N_9gO3El-uku9IMrEpVtLV-aDenvEM9Rb6Kv4Cwec1Q" />
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
