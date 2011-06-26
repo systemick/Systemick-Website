@@ -192,7 +192,7 @@ function tweets_get_tweets($tweet_count = FALSE, $filter_since = TRUE, $cache = 
   if ($cache) {
     foreach($results as $status) {
       $status['tid'] = $status['twitter_id'];
-      twitter_cache_status($status);
+      //twitter_cache_status($status);
     }
   }
   if(is_int($tweet_count)) {
